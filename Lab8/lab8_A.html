@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+
+        function myRecipe(title, servings, ingredients) {
+            this.title = title;
+            this.servings = servings;
+            this.ingredients = ingredients;
+            this.print = function () {
+                document.write('Title: ' + this.title + '<br>');
+                document.write('Serves: ' + this.servings + '<br>');
+                document.write('Ingredients:' + '<br>');
+                for (i = 0; i < this.ingredients.length; i++) {
+                    document.write(this.ingredients[i] + '<br>');
+                }
+            }
+        }
+        myObj = new myRecipe("Chicken Cacciatore", 2, ["cinnamon", "lettuce", "onion"]);
+        myObj.print();
+    </script>
+</body>
+
+</html>
